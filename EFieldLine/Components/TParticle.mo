@@ -4,6 +4,9 @@ model TParticle "Component for the test particle in the system"
   parameter Modelica.SIunits.Velocity Vs "Constant speed of particle";
   parameter Modelica.SIunits.Position x0 "Starting position x coordinate of particle";
   parameter Modelica.SIunits.Position y0 "Starting position y coordinate of particle";
+  parameter Modelica.SIunits.Distance xFrame "X length of frame";
+  parameter Modelica.SIunits.Distance yFrame "Y length of frame";
+  parameter Modelica.SIunits.Distance thresholdFrame "threshold of acceptance to frame";
   Modelica.SIunits.Position x "x coordinate of particle";
   Modelica.SIunits.Position y "y coordinate of particle";
   Real cosTheta "Cos theta where tan theta is Ey/Ex";
@@ -23,5 +26,8 @@ equation
   sinTheta = SumEy / sqrt(SumEx ^ 2 + SumEy ^ 2);
   der(x) = Vs * cosTheta;
   der(y) = Vs * sinTheta;
+  when abs(x - xFrame) < thresholdFrame or abs(y - yFrame) < thresholdFrame then
+    terminate("came to close to frame");
+  end when;
   annotation(Icon(graphics = {Ellipse(extent = {{-100, 100}, {100, -100}}, lineColor = {255, 255, 0}, fillColor = {255, 255, 255}, fillPattern = FillPattern.Solid)}));
 end TParticle;
