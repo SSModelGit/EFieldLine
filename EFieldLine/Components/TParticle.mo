@@ -7,13 +7,13 @@ model TParticle "Component for the test particle in the system"
   parameter Modelica.SIunits.Distance xFrame "X length of frame";
   parameter Modelica.SIunits.Distance yFrame "Y length of frame";
   parameter Modelica.SIunits.Distance thresholdFrame "threshold of acceptance to frame";
-  Modelica.SIunits.Position x "x coordinate of particle";
-  Modelica.SIunits.Position y "y coordinate of particle";
   Real cosTheta "Cos theta where tan theta is Ey/Ex";
   Real sinTheta "Cos theta where tan theta is Ey/Ex";
   Modelica.SIunits.ElectricFieldStrength SumEx "Sum of all e-fields acting upon particle in x dir";
   Modelica.SIunits.ElectricFieldStrength SumEy "Sum of all e-fields acting upon particle in y dir";
-  EFieldLine.Components.EField E annotation(Placement(visible = true, transformation(origin = {0, 0}, extent = {{-25, -25}, {25, 25}}, rotation = 0), iconTransformation(origin = {0, 0}, extent = {{-35, -35}, {35, 35}}, rotation = 0)));
+  EFieldLine.Components.EField E annotation(Placement(visible = true, transformation(origin = {0, -0}, extent = {{-7.5, -7.5}, {7.5, 7.5}}, rotation = 0), iconTransformation(origin = {0, 0}, extent = {{-35, -35}, {35, 35}}, rotation = 0)));
+  Modelica.SIunits.Position x "x coordinate of the position of the test particle" annotation(Placement(visible = true, transformation(origin = {24.37, 30}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {24.37, 30}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.SIunits.Position y "y coordinate of the position of the test particle" annotation(Placement(visible = true, transformation(origin = {30, -30}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {26.887, -30}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
 initial equation
   x = x0;
   y = y0;
