@@ -1,12 +1,12 @@
 within EFieldLine.Components;
 
 model TParticle "Component for the test particle in the system"
-  parameter Modelica.SIunits.Velocity Vs "Constant speed of particle";
-  parameter Modelica.SIunits.Position x0 "Starting position x coordinate of particle";
-  parameter Modelica.SIunits.Position y0 "Starting position y coordinate of particle";
-  parameter Modelica.SIunits.Distance xFrame "X length of frame";
-  parameter Modelica.SIunits.Distance yFrame "Y length of frame";
-  parameter Modelica.SIunits.Distance thresholdFrame "threshold of acceptance to frame";
+  parameter Modelica.SIunits.Velocity Vs = 0.2 "Constant speed of particle";
+  parameter Modelica.SIunits.Position x0 = 4 "Starting position x coordinate of particle";
+  parameter Modelica.SIunits.Position y0 = 0 "Starting position y coordinate of particle";
+  parameter Modelica.SIunits.Distance xFrame = 200 "X length of frame";
+  parameter Modelica.SIunits.Distance yFrame = 200 "Y length of frame";
+  parameter Modelica.SIunits.Distance thresholdFrame = 1e-05 "threshold of acceptance to frame";
   Real cosTheta "Cos theta where tan theta is Ey/Ex";
   Real sinTheta "Cos theta where tan theta is Ey/Ex";
   Modelica.SIunits.ElectricFieldStrength SumEx "Sum of all e-fields acting upon particle in x dir";

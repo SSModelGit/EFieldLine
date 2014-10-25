@@ -2,10 +2,10 @@ within EFieldLine.Components;
 
 model CParticle "Charged Particle"
   parameter Real K(unit = "N.m2/C2") = 9 * 10 ^ 9 "Coulomb's constant";
-  parameter Modelica.SIunits.Position x "x coordinate of the particle";
-  parameter Modelica.SIunits.Position y "y coordinate of the particle";
-  parameter Modelica.SIunits.ElectricCharge q "charge of the particle";
-  parameter Modelica.SIunits.Distance threshold "threshold of proximity to charged particle";
+  parameter Modelica.SIunits.Position x = 0 "x coordinate of the particle";
+  parameter Modelica.SIunits.Position y = 0 "y coordinate of the particle";
+  parameter Modelica.SIunits.ElectricCharge q = 1 "charge of the particle";
+  parameter Modelica.SIunits.Distance threshold = 1e-05 "threshold of proximity to charged particle";
   Modelica.SIunits.Distance l "Distance between charged particle and test particle";
   EField field annotation(Placement(visible = true, transformation(origin = {0, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {0, 0}, extent = {{-25, -25}, {25, 25}}, rotation = 0)));
 protected
