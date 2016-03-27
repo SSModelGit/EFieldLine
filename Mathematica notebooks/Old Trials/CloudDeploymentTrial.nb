@@ -1,0 +1,940 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     34470,        930]
+NotebookOptionsPosition[     33196,        885]
+NotebookOutlinePosition[     33551,        901]
+CellTagsIndexPosition[     33508,        898]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", 
+  RowBox[{"\"\<This is SSModelGit\>\"", ",", " ", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.632544317859501*^9, 3.632544327519966*^9}, {
+  3.632544372596187*^9, 3.632544399013995*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TagBox[
+    ButtonBox[
+     PaneSelectorBox[{
+      False->"\<\"https://www.wolframcloud.com/objects/23648aeb-05a1-4705-\
+ac80-d9d3f1adfea0\"\>", True->
+      StyleBox["\<\"https://www.wolframcloud.com/objects/23648aeb-05a1-4705-\
+ac80-d9d3f1adfea0\"\>", "HyperlinkActive"]}, Dynamic[
+       CurrentValue["MouseOver"]],
+      BaseStyle->{"Hyperlink"},
+      FrameMargins->0,
+      ImageSize->Automatic],
+     BaseStyle->"Hyperlink",
+     ButtonData->{
+       URL[
+       "https://www.wolframcloud.com/objects/23648aeb-05a1-4705-ac80-\
+d9d3f1adfea0"], None},
+     ButtonNote->
+      "https://www.wolframcloud.com/objects/23648aeb-05a1-4705-ac80-\
+d9d3f1adfea0"],
+    Annotation[#, 
+     "https://www.wolframcloud.com/objects/23648aeb-05a1-4705-ac80-\
+d9d3f1adfea0", "Hyperlink"]& ], "]"}],
+  CloudObject[
+  "https://www.wolframcloud.com/objects/23648aeb-05a1-4705-ac80-d9d3f1adfea0"],
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{3.6325443375735397`*^9, 3.632544405474217*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"CopyToClipboard", "[", 
+  RowBox[{
+   RowBox[{
+   "CloudObject", "[", 
+    "\"\<https://www.wolframcloud.com/objects/23648aeb-05a1-4705-ac80-\
+d9d3f1adfea0\>\"", "]"}], "\[LeftDoubleBracket]", "1", 
+   "\[RightDoubleBracket]"}], "]"}]], "Input",
+ NumberMarks->False],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SetOptions", "[", 
+  RowBox[{
+   RowBox[{
+   "CloudObject", "[", 
+    "\"\<https://www.wolframcloud.com/objects/3a4ab866-e54f-4b6b-9856-\
+d3c702fb63e5\>\"", "]"}], ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ NumberMarks->False],
+
+Cell[BoxData[
+ RowBox[{"Permissions", "\[Rule]", "\<\"Public\"\>"}]], "Output",
+ CellChangeTimes->{3.632544353573236*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"f1", "[", "i_", "]"}], ":=", 
+    RowBox[{"DialogInput", "[", 
+     RowBox[{"DynamicModule", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"p", "=", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", "0"}], "}"}]}], ",", 
+         RowBox[{"q", " ", "=", " ", "0"}]}], "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"Column", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"StringJoin", "[", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Charge \>\"", ",", 
+              RowBox[{"ToString", "[", "i", "]"}]}], "}"}], "]"}], ",", 
+           RowBox[{"Row", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Column", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Slider2D", "[", 
+                  RowBox[{
+                   RowBox[{"Dynamic", "[", "p", "]"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "5"}], ",", 
+                    RowBox[{"-", "5"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", "5"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0.5", ",", "0.5"}], "}"}]}], "}"}]}], "]"}], ",",
+                  "\[IndentingNewLine]", 
+                 RowBox[{"Dynamic", "[", "p", "]"}]}], "}"}], "]"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"Column", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{
+                 "TextCell", "[", 
+                  "\"\<Charge Value of Charged Particle in Coloumbs\>\"", 
+                  "]"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"InputField", "[", 
+                  RowBox[{
+                   RowBox[{"Dynamic", "[", "q", "]"}], ",", "Number"}], "]"}],
+                  ",", "\[IndentingNewLine]", 
+                 RowBox[{"DefaultButton", "[", 
+                  RowBox[{"\"\<OK\>\"", ",", 
+                   RowBox[{"DialogReturn", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"p", ",", "q"}], "}"}], "]"}]}], "]"}]}], "}"}], 
+               "]"}]}], "}"}], "]"}]}], "}"}], "]"}], "}"}]}], "]"}], "]"}]}],
+    ";", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"f2", "[", "i_", "]"}], ":=", 
+    RowBox[{"DialogInput", "[", 
+     RowBox[{"DynamicModule", "[", 
+      RowBox[{
+       RowBox[{"{", "n", "}"}], ",", 
+       RowBox[{"Column", "[", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<Number of Charged Particles Contributing to Electric Field\>\"",
+           ",", 
+          RowBox[{"InputField", "[", 
+           RowBox[{
+            RowBox[{"Dynamic", "[", "n", "]"}], ",", "Number"}], "]"}], ",", 
+          RowBox[{"DefaultButton", "[", 
+           RowBox[{"\"\<OK\>\"", ",", 
+            RowBox[{"DialogReturn", "[", "n", "]"}]}], "]"}]}], "}"}], 
+        "]"}]}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"g", "[", "i_", "]"}], ":=", 
+    RowBox[{
+     RowBox[{"componentNames", "[", 
+      RowBox[{"[", "i", "]"}], "]"}], "\[Element]", 
+     "\"\<EFieldLine.Components.CParticle\>\""}]}], ";", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"h", "[", "i_", "]"}], ":=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"componentNames", "[", 
+       RowBox[{"[", "i", "]"}], "]"}], "<>", "\"\<.field\>\""}], "\[Rule]", 
+     " ", "\"\<tparticle1.E\>\""}]}], ";", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"j", "[", "i_", "]"}], ":=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"componentNames", "[", 
+       RowBox[{"[", "i", "]"}], "]"}], "<>", "\"\<.q\>\""}], "\[Rule]", " ", 
+     RowBox[{
+      RowBox[{"chargeInfo", "[", 
+       RowBox[{"[", "i", "]"}], "]"}], "[", 
+      RowBox[{"[", "2", "]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"k", "[", "i_", "]"}], ":=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"componentNames", "[", 
+       RowBox[{"[", "i", "]"}], "]"}], "<>", "\"\<.x\>\""}], "\[Rule]", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"chargeInfo", "[", 
+        RowBox[{"[", "i", "]"}], "]"}], "[", 
+       RowBox[{"[", "1", "]"}], "]"}], "[", 
+      RowBox[{"[", "1", "]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"m", "[", "i_", "]"}], ":=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"componentNames", "[", 
+       RowBox[{"[", "i", "]"}], "]"}], "<>", "\"\<.y\>\""}], "\[Rule]", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"chargeInfo", "[", 
+        RowBox[{"[", "i", "]"}], "]"}], "[", 
+       RowBox[{"[", "1", "]"}], "]"}], "[", 
+      RowBox[{"[", "2", "]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+   RowBox[{"nCharges", "=", 
+    RowBox[{"f2", "[", "1", "]"}]}], ";", "\[IndentingNewLine]", 
+   RowBox[{"chargeInfo", " ", "=", " ", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"f1", "[", "i", "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", "nCharges"}], "}"}]}], "]"}]}], ";", 
+   "\[IndentingNewLine]", 
+   RowBox[{"componentNames", "=", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"\"\<c\>\"", "<>", 
+       RowBox[{"ToString", "[", "i", "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", "nCharges"}], "}"}]}], "]"}]}], ";", 
+   "\[IndentingNewLine]", 
+   RowBox[{"components", "=", 
+    RowBox[{"Append", "[", 
+     RowBox[{
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"g", "[", "x", "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "1", ",", "nCharges"}], "}"}]}], "]"}], ",", 
+      RowBox[{
+      "\"\<tparticle1\>\"", " ", "\[Element]", 
+       "\"\<EFieldLine.Components.TParticle\>\""}]}], "]"}]}], ";", 
+   "\[IndentingNewLine]", 
+   RowBox[{"connections", "=", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"h", "[", "x", "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "1", ",", "nCharges"}], "}"}]}], "]"}]}], ";", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Needs", "[", "\"\<WSMLink`\>\"", "]"}], "\[IndentingNewLine]", 
+    RowBox[{"Append", "[", 
+     RowBox[{"components", ",", 
+      RowBox[{
+      "\"\<tparticle1\>\"", " ", "\[Element]", 
+       "\"\<EFieldLine.Components.TParticle\>\""}]}], "]"}]}], ";", 
+   "\[IndentingNewLine]", 
+   RowBox[{"model", "=", 
+    RowBox[{
+     RowBox[{"WSMConnectComponents", "[", 
+      RowBox[{"\"\<Attempt\>\"", ",", "components", ",", "connections"}], 
+      "]"}], "\[IndentingNewLine]", 
+     RowBox[{"WSMSetValues", "[", 
+      RowBox[{"model", ",", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"j", "[", "x", "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"x", ",", "1", ",", "nCharges"}], "}"}]}], "]"}]}], 
+      "]"}]}]}], ";", "\[IndentingNewLine]", 
+   RowBox[{"WSMSetValues", "[", 
+    RowBox[{"model", ",", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"k", "[", "x", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "1", ",", "nCharges"}], "}"}]}], "]"}]}], "]"}], 
+   ";", "\[IndentingNewLine]", 
+   RowBox[{"WSMSetValues", "[", 
+    RowBox[{"model", ",", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"m", "[", "x", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "1", ",", "nCharges"}], "}"}]}], "]"}]}], "]"}], 
+   ";"}], "]"}]], "Input",
+ CellChangeTimes->{{3.632544639757498*^9, 3.6325446575912743`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"WSMSetValues", "::", "shdw"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Symbol \[NoBreak]\\!\\(\\\"WSMSetValues\\\"\\)\[NoBreak] \
+appears in multiple contexts \[NoBreak]\\!\\({\\\"WSMLink`\\\", \\\"Global`\\\
+\"}\\)\[NoBreak]; definitions in context \[NoBreak]\\!\\(\\\"WSMLink`\\\"\\)\
+\[NoBreak] may shadow or be shadowed by other definitions. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/shdw\\\", \
+ButtonNote -> \\\"WSMLink`WSMSetValues::shdw\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.632544676726984*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"WSMConnectComponents", "::", "shdw"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Symbol \[NoBreak]\\!\\(\\\"WSMConnectComponents\\\"\\)\
+\[NoBreak] appears in multiple contexts \[NoBreak]\\!\\({\\\"WSMLink`\\\", \\\
+\"Global`\\\"}\\)\[NoBreak]; definitions in context \
+\[NoBreak]\\!\\(\\\"WSMLink`\\\"\\)\[NoBreak] may shadow or be shadowed by \
+other definitions. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\
+\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/shdw\\\", ButtonNote -> \
+\\\"WSMLink`WSMConnectComponents::shdw\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.632544677063438*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"$RecursionLimit", "::", "reclim"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Recursion depth of \[NoBreak]\\!\\(1024\\)\[NoBreak] \
+exceeded. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/$RecursionLimit/reclim\\\", ButtonNote -> \
+\\\"$RecursionLimit::reclim\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6325446824181957`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"$RecursionLimit", "::", "reclim"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Recursion depth of \[NoBreak]\\!\\(1024\\)\[NoBreak] \
+exceeded. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/$RecursionLimit/reclim\\\", ButtonNote -> \
+\\\"$RecursionLimit::reclim\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6325446824411077`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"$RecursionLimit", "::", "reclim"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Recursion depth of \[NoBreak]\\!\\(1024\\)\[NoBreak] \
+exceeded. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/$RecursionLimit/reclim\\\", ButtonNote -> \
+\\\"$RecursionLimit::reclim\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6325446824662647`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\($RecursionLimit :: reclim\\), \
+\\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6325446824959707`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TagBox[
+    ButtonBox[
+     PaneSelectorBox[{
+      False->"\<\"https://www.wolframcloud.com/objects/4d09f8b9-0d13-4942-\
+9bc1-74f7fbb0a6eb\"\>", True->
+      StyleBox["\<\"https://www.wolframcloud.com/objects/4d09f8b9-0d13-4942-\
+9bc1-74f7fbb0a6eb\"\>", "HyperlinkActive"]}, Dynamic[
+       CurrentValue["MouseOver"]],
+      BaseStyle->{"Hyperlink"},
+      FrameMargins->0,
+      ImageSize->Automatic],
+     BaseStyle->"Hyperlink",
+     ButtonData->{
+       URL[
+       "https://www.wolframcloud.com/objects/4d09f8b9-0d13-4942-9bc1-\
+74f7fbb0a6eb"], None},
+     ButtonNote->
+      "https://www.wolframcloud.com/objects/4d09f8b9-0d13-4942-9bc1-\
+74f7fbb0a6eb"],
+    Annotation[#, 
+     "https://www.wolframcloud.com/objects/4d09f8b9-0d13-4942-9bc1-\
+74f7fbb0a6eb", "Hyperlink"]& ], "]"}],
+  CloudObject[
+  "https://www.wolframcloud.com/objects/4d09f8b9-0d13-4942-9bc1-74f7fbb0a6eb"],
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{3.632544685857439*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CloudObjectInformation", "[", 
+  RowBox[{
+  "CloudObject", "[", 
+   "\"\<https://www.wolframcloud.com/objects/4d09f8b9-0d13-4942-9bc1-\
+74f7fbb0a6eb\>\"", "]"}], "]"}]], "Input",
+ NumberMarks->False],
+
+Cell[BoxData[
+ InterpretationBox[
+  PanelBox[
+   TagBox[GridBox[{
+      {
+       TemplateBox[{
+        StyleBox[
+         "\"CloudObject: \"", FontColor -> GrayLevel[0.5], StripOnInput -> 
+          False],"\"4d09f8b9-0d13-4942-9bc1-74f7fbb0a6eb\""},
+        "RowDefault"]},
+      {
+       ItemBox[
+        TagBox[
+         DynamicModuleBox[{Typeset`var$$ = False}, 
+          InterpretationBox[
+           StyleBox[
+            PaneSelectorBox[{False->GridBox[{
+               {
+                OpenerBox[Dynamic[Typeset`var$$],
+                 Appearance->Automatic,
+                 AutoAction->False,
+                 ContinuousAction->False,
+                 Enabled->Automatic], 
+                StyleBox["\<\"File information\"\>",
+                 StripOnInput->False,
+                 FontWeight->Bold]}
+              },
+              AutoDelete->False,
+              BaselinePosition->{1, 1},
+              GridBoxAlignment->{"Columns" -> {{Left}}},
+              GridBoxBackground->{"Columns" -> {{Automatic}}},
+              
+              GridBoxItemSize->{
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+              GridBoxSpacings->{"Columns" -> {{0.2}}, "Rows" -> {{0.5}}}], 
+             True->GridBox[{
+               {
+                OpenerBox[Dynamic[Typeset`var$$],
+                 Appearance->Automatic,
+                 AutoAction->False,
+                 ContinuousAction->False,
+                 Enabled->Automatic], 
+                StyleBox["\<\"File information\"\>",
+                 StripOnInput->False,
+                 FontWeight->Bold]},
+               {"", 
+                PaneBox[
+                 TagBox[
+                  TagBox[GridBox[{
+                    {"\<\"UUID\"\>", \
+"\<\"4d09f8b9-0d13-4942-9bc1-74f7fbb0a6eb\"\>"},
+                    {"\<\"Name\"\>", \
+"\<\"4d09f8b9-0d13-4942-9bc1-74f7fbb0a6eb\"\>"},
+                    {"\<\"OwnerWolframUUID\"\>", \
+"\<\"de109b6a-dd47-416b-909e-ff456918d425\"\>"},
+                    {"\<\"MimeType\"\>", \
+"\<\"application/vnd.wolfram.cloudcdf.html\"\>"},
+                    {"\<\"FileType\"\>", "File"},
+                    {"\<\"FileByteCount\"\>", "0"},
+                    {"\<\"Created\"\>", 
+                    
+                    TemplateBox[{
+                    RowBox[{"\"Tue 10 Feb 2015 03:11:25\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"2015", ",", "2", ",", "10"}], "}"}], ",", 
+                    RowBox[{"TimeObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"3", ",", "11", ",", "25.`"}], "}"}], "]"}]}], 
+                    "]"}]},
+                    "DateObject",
+                    Editable->False]},
+                    {"\<\"LastAccessed\"\>", 
+                    
+                    TemplateBox[{
+                    RowBox[{"\"Tue 10 Feb 2015 03:11:25\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"2015", ",", "2", ",", "10"}], "}"}], ",", 
+                    RowBox[{"TimeObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"3", ",", "11", ",", "25.`"}], "}"}], "]"}]}], 
+                    "]"}]},
+                    "DateObject",
+                    Editable->False]},
+                    {"\<\"LastModified\"\>", 
+                    
+                    TemplateBox[{
+                    RowBox[{"\"Tue 10 Feb 2015 03:11:24\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"2015", ",", "2", ",", "10"}], "}"}], ",", 
+                    RowBox[{"TimeObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"3", ",", "11", ",", "24.`"}], "}"}], "]"}]}], 
+                    "]"}]},
+                    "DateObject",
+                    Editable->False]},
+                    {"\<\"Permissions\"\>", 
+                    RowBox[{"{", 
+                    RowBox[{"\<\"Owner\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"Read\"\>", ",", "\<\"Write\"\>", 
+                    ",", "\<\"Execute\"\>"}], "}"}]}], "}"}]},
+                    {"\<\"Active\"\>", "True"}
+                    },
+                    AutoDelete->False,
+                    GridBoxAlignment->{"Columns" -> {Right, Left}},
+                    
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                   "Grid"],
+                  BoxForm`Undeploy,
+                  DefaultBaseStyle->{Deployed -> False}],
+                 ImageMargins->0]}
+              },
+              AutoDelete->False,
+              BaselinePosition->{1, 1},
+              GridBoxAlignment->{"Columns" -> {{Left}}},
+              GridBoxBackground->{"Columns" -> {{Automatic}}},
+              
+              GridBoxItemSize->{
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+              GridBoxSpacings->{"Columns" -> {{0.2}}, "Rows" -> {{0.5}}}]}, 
+             Dynamic[Typeset`var$$],
+             Alignment->Automatic,
+             BaselinePosition->Baseline,
+             DefaultBaseStyle->"OpenerView",
+             ImageMargins->0,
+             ImageSize->Automatic], "Deploy",
+            StripOnInput->False],
+           OpenerView[{
+             Style["File information", Bold], 
+             BoxForm`Undeploy[
+              
+              Grid[{{"UUID", "4d09f8b9-0d13-4942-9bc1-74f7fbb0a6eb"}, {
+                "Name", "4d09f8b9-0d13-4942-9bc1-74f7fbb0a6eb"}, {
+                "OwnerWolframUUID", "de109b6a-dd47-416b-909e-ff456918d425"}, {
+                "MimeType", "application/vnd.wolfram.cloudcdf.html"}, {
+                "FileType", File}, {"FileByteCount", 0}, {"Created", 
+                 DateObject[{2015, 2, 10}, 
+                  TimeObject[{3, 11, 25.}]]}, {"LastAccessed", 
+                 DateObject[{2015, 2, 10}, 
+                  TimeObject[{3, 11, 25.}]]}, {"LastModified", 
+                 DateObject[{2015, 2, 10}, 
+                  TimeObject[{3, 11, 24.}]]}, {
+                "Permissions", {"Owner" -> {"Read", "Write", "Execute"}}}, {
+                "Active", True}}, Alignment -> {{Right, Left}}]]}, False, 
+            Deployed -> True]],
+          DynamicModuleValues:>{}],
+         Setting[#, {0}]& ],
+        Alignment->Left,
+        StripOnInput->False]}
+     },
+     BaselinePosition->{2, 1},
+     DefaultBaseStyle->"Column",
+     FrameStyle->GrayLevel[0.85],
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {False, True}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+     GridBoxSpacings->{
+      "Columns" -> {{Automatic}}, "Rows" -> {Automatic, 1.2}}],
+    "Column"],
+   BaselinePosition->Baseline],
+  CloudObjectInformationData[
+   Association[{
+    "UUID" -> "4d09f8b9-0d13-4942-9bc1-74f7fbb0a6eb", "Name" -> 
+     "4d09f8b9-0d13-4942-9bc1-74f7fbb0a6eb", "OwnerWolframUUID" -> 
+     "de109b6a-dd47-416b-909e-ff456918d425", "MimeType" -> 
+     "application/vnd.wolfram.cloudcdf.html", "FileType" -> File, 
+     "FileByteCount" -> 0, "Created" -> DateObject[{2015, 2, 10}, 
+       TimeObject[{3, 11, 25.}]], "LastAccessed" -> 
+     DateObject[{2015, 2, 10}, 
+       TimeObject[{3, 11, 25.}]], "LastModified" -> 
+     DateObject[{2015, 2, 10}, 
+       TimeObject[{3, 11, 24.}]], 
+     "Permissions" -> {"Owner" -> {"Read", "Write", "Execute"}}, "Active" -> 
+     True}]],
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{3.6325448015908957`*^9}]
+}, Open  ]],
+
+Cell[BoxData["Quit"], "Input",
+ CellChangeTimes->{{3.632544885118536*^9, 3.632544886260418*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"f1", "[", "i_", "]"}], ":=", 
+    RowBox[{"DialogInput", "[", 
+     RowBox[{"DynamicModule", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"p", "=", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", "0"}], "}"}]}], ",", 
+         RowBox[{"q", " ", "=", " ", "0"}]}], "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"Column", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"StringJoin", "[", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Charge \>\"", ",", 
+              RowBox[{"ToString", "[", "i", "]"}]}], "}"}], "]"}], ",", 
+           RowBox[{"Row", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Column", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Slider2D", "[", 
+                  RowBox[{
+                   RowBox[{"Dynamic", "[", "p", "]"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "5"}], ",", 
+                    RowBox[{"-", "5"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", "5"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0.5", ",", "0.5"}], "}"}]}], "}"}]}], "]"}], ",",
+                  "\[IndentingNewLine]", 
+                 RowBox[{"Dynamic", "[", "p", "]"}]}], "}"}], "]"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"Column", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{
+                 "TextCell", "[", 
+                  "\"\<Charge Value of Charged Particle in Coloumbs\>\"", 
+                  "]"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"InputField", "[", 
+                  RowBox[{
+                   RowBox[{"Dynamic", "[", "q", "]"}], ",", "Number"}], "]"}],
+                  ",", "\[IndentingNewLine]", 
+                 RowBox[{"DefaultButton", "[", 
+                  RowBox[{"\"\<OK\>\"", ",", 
+                   RowBox[{"DialogReturn", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"p", ",", "q"}], "}"}], "]"}]}], "]"}]}], "}"}], 
+               "]"}]}], "}"}], "]"}]}], "}"}], "]"}], "}"}]}], "]"}], "]"}]}],
+    ";", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"f2", "[", "i_", "]"}], ":=", 
+    RowBox[{"DialogInput", "[", 
+     RowBox[{"DynamicModule", "[", 
+      RowBox[{
+       RowBox[{"{", "n", "}"}], ",", 
+       RowBox[{"Column", "[", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<Number of Charged Particles Contributing to Electric Field\>\"",
+           ",", 
+          RowBox[{"InputField", "[", 
+           RowBox[{
+            RowBox[{"Dynamic", "[", "n", "]"}], ",", "Number"}], "]"}], ",", 
+          RowBox[{"DefaultButton", "[", 
+           RowBox[{"\"\<OK\>\"", ",", 
+            RowBox[{"DialogReturn", "[", "n", "]"}]}], "]"}]}], "}"}], 
+        "]"}]}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"g", "[", "i_", "]"}], ":=", 
+    RowBox[{
+     RowBox[{"componentNames", "[", 
+      RowBox[{"[", "i", "]"}], "]"}], "\[Element]", 
+     "\"\<EFieldLine.Components.CParticle\>\""}]}], ";", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"h", "[", "i_", "]"}], ":=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"componentNames", "[", 
+       RowBox[{"[", "i", "]"}], "]"}], "<>", "\"\<.field\>\""}], "\[Rule]", 
+     " ", "\"\<tparticle1.E\>\""}]}], ";", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"j", "[", "i_", "]"}], ":=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"componentNames", "[", 
+       RowBox[{"[", "i", "]"}], "]"}], "<>", "\"\<.q\>\""}], "\[Rule]", " ", 
+     RowBox[{
+      RowBox[{"chargeInfo", "[", 
+       RowBox[{"[", "i", "]"}], "]"}], "[", 
+      RowBox[{"[", "2", "]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"k", "[", "i_", "]"}], ":=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"componentNames", "[", 
+       RowBox[{"[", "i", "]"}], "]"}], "<>", "\"\<.x\>\""}], "\[Rule]", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"chargeInfo", "[", 
+        RowBox[{"[", "i", "]"}], "]"}], "[", 
+       RowBox[{"[", "1", "]"}], "]"}], "[", 
+      RowBox[{"[", "1", "]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"m", "[", "i_", "]"}], ":=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"componentNames", "[", 
+       RowBox[{"[", "i", "]"}], "]"}], "<>", "\"\<.y\>\""}], "\[Rule]", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"chargeInfo", "[", 
+        RowBox[{"[", "i", "]"}], "]"}], "[", 
+       RowBox[{"[", "1", "]"}], "]"}], "[", 
+      RowBox[{"[", "2", "]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+   RowBox[{"nCharges", "=", 
+    RowBox[{"f2", "[", "1", "]"}]}], ";", "\[IndentingNewLine]", 
+   RowBox[{"chargeInfo", " ", "=", " ", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"f1", "[", "i", "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", "nCharges"}], "}"}]}], "]"}]}], ";", 
+   "\[IndentingNewLine]", 
+   RowBox[{"componentNames", "=", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"\"\<c\>\"", "<>", 
+       RowBox[{"ToString", "[", "i", "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", "nCharges"}], "}"}]}], "]"}]}], ";", 
+   "\[IndentingNewLine]", 
+   RowBox[{"components", "=", 
+    RowBox[{"Append", "[", 
+     RowBox[{
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"g", "[", "x", "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "1", ",", "nCharges"}], "}"}]}], "]"}], ",", 
+      RowBox[{
+      "\"\<tparticle1\>\"", " ", "\[Element]", 
+       "\"\<EFieldLine.Components.TParticle\>\""}]}], "]"}]}], ";", 
+   "\[IndentingNewLine]", 
+   RowBox[{"connections", "=", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"h", "[", "x", "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "1", ",", "nCharges"}], "}"}]}], "]"}]}], ";", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Append", "[", 
+    RowBox[{"components", ",", 
+     RowBox[{
+     "\"\<tparticle1\>\"", " ", "\[Element]", 
+      "\"\<EFieldLine.Components.TParticle\>\""}]}], "]"}], ";", 
+   "\[IndentingNewLine]", 
+   RowBox[{"model", "=", 
+    RowBox[{
+     RowBox[{"WSMConnectComponents", "[", 
+      RowBox[{"\"\<Attempt\>\"", ",", "components", ",", "connections"}], 
+      "]"}], "\[IndentingNewLine]", 
+     RowBox[{"WSMSetValues", "[", 
+      RowBox[{"model", ",", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"j", "[", "x", "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"x", ",", "1", ",", "nCharges"}], "}"}]}], "]"}]}], 
+      "]"}]}]}], ";", "\[IndentingNewLine]", 
+   RowBox[{"WSMSetValues", "[", 
+    RowBox[{"model", ",", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"k", "[", "x", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "1", ",", "nCharges"}], "}"}]}], "]"}]}], "]"}], 
+   ";", "\[IndentingNewLine]", 
+   RowBox[{"WSMSetValues", "[", 
+    RowBox[{"model", ",", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"m", "[", "x", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "1", ",", "nCharges"}], "}"}]}], "]"}]}], "]"}], 
+   ";"}], "]"}]], "Input",
+ CellChangeTimes->{3.6325448992284527`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"$RecursionLimit", "::", "reclim"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Recursion depth of \[NoBreak]\\!\\(1024\\)\[NoBreak] \
+exceeded. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/$RecursionLimit/reclim\\\", ButtonNote -> \
+\\\"$RecursionLimit::reclim\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.632544907216874*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"$RecursionLimit", "::", "reclim"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Recursion depth of \[NoBreak]\\!\\(1024\\)\[NoBreak] \
+exceeded. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/$RecursionLimit/reclim\\\", ButtonNote -> \
+\\\"$RecursionLimit::reclim\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6325449072360897`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"$RecursionLimit", "::", "reclim"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Recursion depth of \[NoBreak]\\!\\(1024\\)\[NoBreak] \
+exceeded. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/$RecursionLimit/reclim\\\", ButtonNote -> \
+\\\"$RecursionLimit::reclim\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.632544907266017*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\($RecursionLimit :: reclim\\), \
+\\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.632544907294327*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TagBox[
+    ButtonBox[
+     PaneSelectorBox[{
+      False->"\<\"https://www.wolframcloud.com/objects/76177e02-40e7-4b9a-\
+8e63-eb6dbd962a2d\"\>", True->
+      StyleBox["\<\"https://www.wolframcloud.com/objects/76177e02-40e7-4b9a-\
+8e63-eb6dbd962a2d\"\>", "HyperlinkActive"]}, Dynamic[
+       CurrentValue["MouseOver"]],
+      BaseStyle->{"Hyperlink"},
+      FrameMargins->0,
+      ImageSize->Automatic],
+     BaseStyle->"Hyperlink",
+     ButtonData->{
+       URL[
+       "https://www.wolframcloud.com/objects/76177e02-40e7-4b9a-8e63-\
+eb6dbd962a2d"], None},
+     ButtonNote->
+      "https://www.wolframcloud.com/objects/76177e02-40e7-4b9a-8e63-\
+eb6dbd962a2d"],
+    Annotation[#, 
+     "https://www.wolframcloud.com/objects/76177e02-40e7-4b9a-8e63-\
+eb6dbd962a2d", "Hyperlink"]& ], "]"}],
+  CloudObject[
+  "https://www.wolframcloud.com/objects/76177e02-40e7-4b9a-8e63-eb6dbd962a2d"],
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{3.632544914855886*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 619},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 285, 5, 28, "Input"],
+Cell[868, 29, 1057, 28, 31, "Output"]
+}, Open  ]],
+Cell[1940, 60, 290, 8, 63, "Input"],
+Cell[CellGroupData[{
+Cell[2255, 72, 290, 8, 80, "Input"],
+Cell[2548, 82, 121, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2706, 89, 7530, 202, 505, "Input"],
+Cell[10239, 293, 672, 12, 42, "Message"],
+Cell[10914, 307, 698, 13, 60, "Message"],
+Cell[11615, 322, 476, 10, 24, "Message"],
+Cell[12094, 334, 476, 10, 24, "Message"],
+Cell[12573, 346, 476, 10, 24, "Message"],
+Cell[13052, 358, 542, 11, 24, "Message"],
+Cell[13597, 371, 1033, 28, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14667, 404, 223, 6, 63, "Input"],
+Cell[14893, 412, 7729, 183, 72, "Output"]
+}, Open  ]],
+Cell[22637, 598, 96, 1, 28, "Input"],
+Cell[CellGroupData[{
+Cell[22758, 603, 7410, 200, 488, "Input"],
+Cell[30171, 805, 474, 10, 24, "Message"],
+Cell[30648, 817, 476, 10, 24, "Message"],
+Cell[31127, 829, 474, 10, 24, "Message"],
+Cell[31604, 841, 540, 11, 24, "Message"],
+Cell[32147, 854, 1033, 28, 31, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
